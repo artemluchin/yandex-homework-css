@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
+a:hover, a:active {
+  outline: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* -----------------------
+  styles.scss
+--------------------------*/
+.article {
+  font-family: 'PT Serif', serif; }
+
+.section:first-of-type .section__header-maintext {
+  font-size: calc(40px + (80 - 40) * (100vw - 320px) / (1920 - 320));
+  font-weight: bold; }
+
+.section:first-of-type p:first-of-type:first-letter {
+  font-size: 3em;
+  line-height: 0; }
+
+.section:last-of-type .section__header {
+  margin-bottom: 0; }
+
+.section__header {
+  position: relative;
+  margin-bottom: 8vh; }
+
+.section__header-image {
+  position: relative;
+  height: 80vh;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll; }
+  .section__header-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.15); }
+
+.section__header-text {
+  position: absolute;
+  width: 90%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+
+.section__header-maintext {
+  margin-right: -0.4em;
+  letter-spacing: 0.4em;
+  text-align: center;
+  line-height: 1.2em;
+  color: #fff;
+  font-size: calc(24px + (60 - 24) * (100vw - 320px) / (1920 - 320)); }
+
+.section__header-subtext {
+  word-spacing: 0.3em;
+  letter-spacing: 0.3em;
+  color: #fff;
+  text-align: center;
+  margin-top: 1.2em;
+  font-size: calc(12px + (20 - 12) * (100vw - 320px) / (1920 - 320)); }
+
+.section__header-info {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 0 30px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  bottom: 1em;
+  font-size: calc(12px + (16 - 12) * (100vw - 320px) / (1920 - 320)); }
+
+.section__body,
+.section__picture-body {
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+.section__main-column {
+  position: relative;
+  margin-bottom: -5vh; }
+  .section__main-column p {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    text-align: justify;
+    line-height: 1.5em;
+    font-size: calc(18px + (20 - 18) * (100vw - 320px) / (1920 - 320)); }
+
+.section__aside {
+  margin: 0 auto 5vh; }
+
+.section__aside-top {
+  top: 0;
+  right: 0; }
+
+.section__aside-bottom {
+  bottom: 0;
+  right: 0; }
+
+.aside__thin-info {
+  position: relative;
+  text-align: justify;
+  line-height: 1.25em;
+  font-size: calc(15px + (16 - 15) * (100vw - 320px) / (1920 - 320)); }
+  .aside__thin-info:before {
+    content: '';
+    height: 100%;
+    border-left: 0.25em solid #eee;
+    position: absolute;
+    left: -1em; }
+
+.aside__bold-info {
+  font-weight: bold;
+  position: relative;
+  text-align: justify;
+  color: #333;
+  line-height: 1.4em;
+  font-size: calc(16px + (18 - 16) * (100vw - 320px) / (1920 - 320)); }
+  .aside__bold-info:before {
+    content: '';
+    height: 100%;
+    border-left: 0.25em solid #eee;
+    position: absolute;
+    left: -1em; }
+
+.aside__picture {
+  margin: 0 auto .8em;
+  width: 100%; }
+
+.aside__picture-image img {
+  width: 100%; }
+
+.aside__picture-description {
+  margin: 1em auto 0;
+  line-height: 1.2em;
+  font-size: calc(14px + (16 - 14) * (100vw - 320px) / (1920 - 320)); }
+
+.section__picture-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 8vh; }
+
+.section__picture-header {
+  margin: 0 auto 5vh;
+  font-size: calc(25px + (30 - 25) * (100vw - 320px) / (1920 - 320));
+  font-weight: bold;
+  letter-spacing: 0.15em; }
+
+@media (min-width: 320px) {
+  .section__body,
+  .section__picture-body {
+    padding: 0 0 10vh; }
+  .section__main-column {
+    width: 100%; }
+    .section__main-column p {
+      margin: 0 auto 5vh;
+      width: 90%; }
+  .section__aside {
+    width: 100%; }
+  .aside__bold-info {
+    width: 80%;
+    margin: 0 auto; }
+  .aside__thin-info {
+    width: 80%;
+    margin: 0 auto; }
+  .aside__picture-description {
+    width: 80%; }
+  .section__picture-header {
+    width: 90%; } }
+
+@media (min-width: 480px) {
+  .section__aside {
+    width: 65%; }
+  .aside__bold-info {
+    width: 100%; }
+  .aside__thin-info {
+    width: 100%; }
+  .aside__picture-description {
+    width: 100%; } }
+
+@media (min-width: 768px) {
+  .section__body,
+  .section__picture-body {
+    max-width: 80%; }
+  .section__main-column p {
+    width: 100%; }
+  .section__picture-header {
+    width: 100%; } }
+
+@media (min-width: 1024px) {
+  .section__body,
+  .section__picture-body {
+    max-width: 80%; }
+  .section__main-column {
+    width: 55%;
+    padding-right: 45%; }
+  .section__aside {
+    position: absolute;
+    width: 35%;
+    margin-bottom: 0; } }
+
+@media (min-width: 1280px) {
+  .section__header-image {
+    background-attachment: fixed; } }
+
+@media (min-width: 1440px) {
+  .section__body,
+  .section__picture-body {
+    max-width: 65%; } }
